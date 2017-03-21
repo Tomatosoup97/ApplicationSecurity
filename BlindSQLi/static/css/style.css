@@ -1,0 +1,12 @@
+.content {
+    margin: 3em;
+}
+.header {
+    text-align: center;
+}
+.links li {
+    margin-bottom: 1em;
+}
+.logo {
+    height: 200px;
+}

