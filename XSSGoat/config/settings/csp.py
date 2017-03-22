@@ -11,7 +11,7 @@ MIDDLEWARE += [
 ]
 
 CSP_DEFAULT_SRC = (
-    "'self'",
+    "'none'",
 )
 CSP_STYLE_SRC = (
     "'self'",

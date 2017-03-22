@@ -7,3 +7,10 @@ class Comment(models.Model):
 
     def __str__(self):
         return 'Comment: {}...'.format(self.title[:32])
+
+
+class Opinion(models.Model):
+    text = models.TextField()
+
+    def __str__(self):
+        return 'Opinion: {}...'.format(self.text[:32])

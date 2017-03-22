@@ -10,7 +10,18 @@
 {% block content %}
 
 <h1 class="header"></h1>
-<a href="{% url "core:router" %}">&#8592; Go back</a>
+<a href="{% url "storedxss:comments-list" %}">&#8592; Go back</a><br>
+
+
+<a href="{% url "storedxss:opinions-create" %}">Write opinion</a>
+
+<br>
+<h2>Our recent opinions: </h2>
+{% autoescape off %}
+{% for opinion in opinions %}
+    <p>{{ opinion.text }}</p>
+{% endfor %}
+{% endautoescape %}
 
 <form method="POST">
     {% csrf_token %}

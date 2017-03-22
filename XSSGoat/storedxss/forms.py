@@ -1,9 +1,15 @@
-from django.forms import ModelForm
+from django import forms 
 
-from .models import Comment
+from .models import Comment, Opinion
 
 
-class CommentForm(ModelForm):
+class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('title', 'text')
+
+
+class OpinionForm(forms.ModelForm):
+    class Meta:
+        model = Opinion
+        fields = ('text',)

